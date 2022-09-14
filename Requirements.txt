@@ -1,0 +1,80 @@
+Hi, is this visible to you ?
+
+==================================
+Design a Meeting Room Booking Service
+
+
+Room
+    - id
+    - MetaData
+
+
+RoomMetaData
+    - id
+    - Capcaity
+    - Projector
+    - WhiteBoard
+
+
+Timeslot
+    - startTime
+    - endTime
+
+Booking
+    - id
+    - Room
+    - timeSlot
+    - noOfPersons
+
+
+RoomService
+    - addRoom()
+    - searchRoom(searchRequest)
+
+
+BookingSevice
+    - book(roomBookingRequest)
+    - update(id, updateBookingRequest)
+    - cancel(id)
+
+
+Capcaity
+
+List of APIs
+1.  POST room/search?limit=10&page=1
+
+    Request Body:
+        {
+            'startTime':
+            'endTime':
+            'is_free':
+            'id': [],
+            'filter': {
+                'capcaity': 10,
+                'is_projector': true/false,
+                'is_whiteboard': true/false
+            }
+        }
+
+    Response: {
+        'count': 5,
+        'results': [
+            {
+
+            }
+        ]
+    }
+
+2.  POST room/{id}/reverse
+        timeSlot
+
+3. POST booking/{id}/cancel
+
+4. PUT booking/{id}
+    Update the booking
+
+
+5. Admins APIs
+    Create Rooms
+    POST /room
+
