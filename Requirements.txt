@@ -1,6 +1,3 @@
-Hi, is this visible to you ?
-
-==================================
 Design a Meeting Room Booking Service
 
 
