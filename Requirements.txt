@@ -1,6 +1,5 @@
 Design a Meeting Room Booking Service
 
-
 Room
     - id
     - MetaData
